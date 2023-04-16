@@ -4,8 +4,10 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Datasiswa extends Migration {
-    public function up() {
+class Datasiswa extends Migration
+{
+    public function up()
+    {
         $data = [
             'id' => [
                 'type'  => 'INT',
@@ -14,6 +16,7 @@ class Datasiswa extends Migration {
             'id_user' => [
                 'type'  => 'INT',
             ],
+
             'nisn' => [
                 'type' => 'VARCHAR',
                 'constraint' => 32
@@ -61,7 +64,8 @@ class Datasiswa extends Migration {
         $this->forge->createTable('siswa');
     }
 
-    public function down() {
+    public function down()
+    {
         $this->forge->dropTable('siswa');
     }
 }

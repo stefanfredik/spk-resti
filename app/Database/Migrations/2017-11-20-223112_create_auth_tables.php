@@ -4,8 +4,10 @@ namespace Myth\Auth\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class CreateAuthTables extends Migration {
-    public function up() {
+class CreateAuthTables extends Migration
+{
+    public function up()
+    {
         $this->forge->addField([
             'id'               => ['type' => 'int', 'constraint'        => 11, 'unsigned'   => true, 'auto_increment' => true],
             'nama_user'        => ['type' => 'varchar', 'constraint'    => 64,  'null'  => true],
@@ -147,7 +149,8 @@ class CreateAuthTables extends Migration {
 
     //--------------------------------------------------------------------
 
-    public function down() {
+    public function down()
+    {
         // drop constraints first to prevent errors
         if ($this->db->DBDriver !== 'SQLite3') { // @phpstan-ignore-line
             $this->forge->dropForeignKey('auth_tokens', 'auth_tokens_user_id_foreign');
