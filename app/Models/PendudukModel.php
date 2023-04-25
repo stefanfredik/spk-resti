@@ -14,7 +14,7 @@ class PendudukModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['id', 'id_user', 'nik', 'no_kk', 'nama_penduduk', 'jenis_kelamin', 'rt', 'rw', 'status'];
+    protected $allowedFields    = ['id', 'id_user', 'nik', 'no_kk', 'nama_lengkap','tanggal_lahir','tempat_lahir', 'jenis_kelamin','telepon', 'alamat','desa','kecamatan','kabupaten','provinsi'];
 
 
     public function findAllData()

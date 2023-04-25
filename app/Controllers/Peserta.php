@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use App\Models\KriteriaModel;
 use App\Models\PesertaModel;
-use App\Models\SiswaModel;
+use App\Models\PendudukModel;
 use App\Models\SubkriteriaModel;
 use CodeIgniter\API\ResponseTrait;
 
@@ -20,7 +20,7 @@ class Peserta extends BaseController {
 
     public function __construct() {
         $this->pesertaModel = new PesertaModel();
-        $this->siswaModel = new SiswaModel();
+        $this->pendudukModel = new PendudukModel();
         $this->kriteriaModel = new KriteriaModel();
         $this->subKriteriaModel = new SubkriteriaModel();
     }
@@ -49,7 +49,7 @@ class Peserta extends BaseController {
         $data = [
             'title' => 'Tambah Data Peserta',
             'meta'   => $this->meta,
-            'dataSiswa' => $this->siswaModel->findAll(),
+            'dataPenduduk' => $this->pendudukModel->findAll(),
             'dataKriteria' => $this->kriteriaModel->findAll(),
             'dataSubkriteria' => $this->subKriteriaModel->findAll(),
             'dataPeserta' => $this->pesertaModel->findAll(),
@@ -62,7 +62,7 @@ class Peserta extends BaseController {
         $data = [
             'title' => 'Edit Data Peserta',
             'meta'   => $this->meta,
-            'dataSiswa' => $this->siswaModel->findAll(),
+            'dataPenduduk' => $this->pendudukModel->findAll(),
             'dataKriteria' => $this->kriteriaModel->findAll(),
             'dataSubkriteria' => $this->subKriteriaModel->findAll(),
             'peserta' => $this->pesertaModel->find($id),
@@ -77,7 +77,7 @@ class Peserta extends BaseController {
         $data = [
             'dataKriteria'  => $this->kriteriaModel->findAll(),
             'dataSubkriteria' => $this->subKriteriaModel->findAll(),
-            'dataSiswa' => $this->siswaModel->findAll(),
+            'dataPenduduk' => $this->pendudukModel->findAll(),
             'peserta' => $this->pesertaModel->findAllPeserta($id)[0],
             'meta'   => $this->meta
         ];

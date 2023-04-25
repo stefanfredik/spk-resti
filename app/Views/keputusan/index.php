@@ -32,8 +32,8 @@
                         <thead>
                             <tr class="align-middle">
                                 <th class="text-center">Rangking</th>
-                                <th>NISN</td>
-                                <th>Nama Lengkap</th>
+                                <th>NIK</td>
+                                <th>No. KK</th>
                                 <th>Jenis Kelamin</td>
                                 <th>Alamat</td>
                                 <th>Nilai Akhir</td>
@@ -47,7 +47,7 @@
                             ?>
                                 <tr>
                                     <td class="text-center"><?= $rank++; ?></td>
-                                    <td><?= $ps['nisn'] ?></td>
+                                    <td><?= $ps['nik'] ?></td>
                                     <td><?= $ps['nama_lengkap'] ?></td>
                                     <td><?= $ps['jenis_kelamin'] ?></td>
                                     <td><?= $ps['alamat'] ?></td>

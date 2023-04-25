@@ -19,7 +19,7 @@
                 <?php if ($dt['status_layak'] != 'Tidak Layak') : ?>
                     <tr>
                         <td class="text-center"><?= $no++; ?></td>
-                        <td><?= $dt['nisn']; ?></td>
+                        <td><?= $dt['nik']; ?></td>
                         <td><?= $dt['nama_lengkap']; ?></td>
                         <td><?= $dt['jenis_kelamin'] ?></td>
                         <td><?= $dt['tanggal_lahir']; ?></td>

@@ -4,7 +4,7 @@ namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
-class Datasiswa extends Migration
+class Datapenduduk extends Migration
 {
     public function up()
     {
@@ -17,7 +17,12 @@ class Datasiswa extends Migration
                 'type'  => 'INT',
             ],
 
-            'nisn' => [
+            'nik' => [
+                'type' => 'VARCHAR',
+                'constraint' => 32
+            ],
+
+            'no_kk' => [
                 'type' => 'VARCHAR',
                 'constraint' => 32
             ],
@@ -36,24 +41,29 @@ class Datasiswa extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => 64
             ],
-            'kelas' => [
-                'type' => 'VARCHAR',
-                'constraint' => 64
-            ],
-            'nama_orangtua' => [
-                'type' => 'VARCHAR',
-                'constraint' => 64
-            ],
-            'jumlah_tanggungan' => [
-                'type' => 'VARCHAR',
-                'constraint' => 64
-            ],
 
             'telepon' => [
                 'type' => 'VARCHAR',
                 'constraint' => 64
             ],
+
             'alamat' => [
+                'type' => 'VARCHAR',
+                'constraint' => 128
+            ],
+            'desa' => [
+                'type' => 'VARCHAR',
+                'constraint' => 128
+            ],
+            'kecamatan' => [
+                'type' => 'VARCHAR',
+                'constraint' => 128
+            ],
+            'kabupaten' => [
+                'type' => 'VARCHAR',
+                'constraint' => 128
+            ],
+            'provinsi' => [
                 'type' => 'VARCHAR',
                 'constraint' => 128
             ]
@@ -61,11 +71,11 @@ class Datasiswa extends Migration
 
         $this->forge->addField($data);
         $this->forge->addKey('id', true);
-        $this->forge->createTable('siswa');
+        $this->forge->createTable('datapenduduk');
     }
 
     public function down()
     {
-        $this->forge->dropTable('siswa');
+        $this->forge->dropTable('datapenduduk');
     }
 }

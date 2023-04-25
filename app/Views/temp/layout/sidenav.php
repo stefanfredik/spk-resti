@@ -17,8 +17,6 @@
                 Dashboard
             </a>
 
-
-
             <a class="nav-link" href="/profile">
                 <div class="nav-link-icon"><i data-feather="user"></i></div>
                 Profile
@@ -31,9 +29,9 @@
             </a>
 
 
-            <a class="nav-link" href="/datasiswa">
+            <a class="nav-link" href="/datapenduduk">
                 <div class="nav-link-icon"><i data-feather="layers"></i></div>
-                Data Siswa
+                Data Penduduk
             </a>
             <hr class="hr">
 

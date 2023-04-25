@@ -4,6 +4,7 @@
             <tr>
                 <th>No</th>
                 <th>NIK</th>
+                <th>No. KK</th>
                 <th>Nama</th>
                 <th>Jenis Kelamin</th>
                 <th>Action</th>
@@ -15,7 +16,8 @@
             foreach ($dataPeserta as $dt) : ?>
                 <tr>
                     <td><?= $no++; ?></td>
-                    <td><?= $dt['nisn']; ?></td>
+                    <td><?= $dt['nik']; ?></td>
+                    <td><?= $dt['no_kk']; ?></td>
                     <td><?= $dt['nama_lengkap']; ?></td>
                     <td><?= $dt['jenis_kelamin']; ?></td>
 

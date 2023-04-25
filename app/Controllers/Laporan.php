@@ -30,6 +30,7 @@ class Laporan extends BaseController {
             'dataKriteria' => $this->kriteriaModel->findAll(),
             'dataSubkriteria' => $this->subkriteriaModel->findAll(),
             'url'   => $this->meta['url'],
+            'meta'  => $this->meta
         ];
 
         // dd($data);

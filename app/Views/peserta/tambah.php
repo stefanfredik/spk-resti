@@ -14,9 +14,9 @@
 
 
                         <div class="col-md-8">
-                            <select class="form-control" name="id_siswa" id="" required>
+                            <select class="form-control" name="id_penduduk" id="" required>
                                 <option value="">Pilih Siswa</option>
-                                <?php foreach ($dataSiswa as $dt) : ?>
+                                <?php foreach ($dataPenduduk as $dt) : ?>
                                     <option value="<?= $dt['id']; ?>"><?= $dt['nama_lengkap']; ?></option>
                                 <?php endforeach; ?>
                             </select>

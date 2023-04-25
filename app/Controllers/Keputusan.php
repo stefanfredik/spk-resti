@@ -7,7 +7,7 @@ use App\Libraries\Moora;
 use App\Models\KelayakanModel;
 use App\Models\KriteriaModel;
 use App\Models\PesertaModel;
-use App\Models\SiswaModel;
+use App\Models\PendudukModel;
 use App\Models\SubkriteriaModel;
 
 class Keputusan extends BaseController {
@@ -19,7 +19,7 @@ class Keputusan extends BaseController {
 
     public function __construct() {
         $this->kriteriaModel = new KriteriaModel();
-        $this->siswaModel = new SiswaModel();
+        $this->pendudukModel = new PendudukModel();
         $this->subkriteriaModel = new SubkriteriaModel();
         $this->pesertaModel = new PesertaModel();
         $this->kelayakanModel = new KelayakanModel();
@@ -39,12 +39,9 @@ class Keputusan extends BaseController {
 
         $moora = new Moora($peserta, $kriteria, $subkriteria, $kelayakan);
 
-
-
-
         $data = [
             'title'         => 'Data Perhitungan dan Table Moora',
-            'url'           => $this->meta['url'],
+            'meta'          => $this->meta,
             'peserta'       => $moora->getAllPeserta(),
             'kelayakan'     => $kelayakan
         ];
