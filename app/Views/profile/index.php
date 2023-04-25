@@ -24,22 +24,22 @@
             <div class="card-body">
                 <div class="mb-3">
                     <label class="small mb-1" for="">Nama Lengkap</label>
-                    <p class="">Nama Lengkap</p>
+                    <p class=""><?= user()->nama_user ?></p>
                 </div>
 
                 <div class="mb-3">
                     <label class="small mb-1" for="">Username</label>
-                    <p class="">Username</p>
+                    <p class=""><?= user()->username ?></p>
                 </div>
 
                 <div class="mb-3">
                     <label class="small mb-1" for="">User Role/ Jabatan</label>
-                    <p class="">Admin</p>
+                    <p class=""><?= $user['jabatan'] ?></p>
                 </div>
 
                 <div class="mb-3">
                     <label class="small mb-1" for="">User dibuat</label>
-                    <p class="">Waktu</p>
+                    <p class=""><?= user()->created_at ?></p>
                 </div>
             </div>
         </div>

@@ -12,12 +12,12 @@
                 <h6 class="dropdown-header d-flex align-items-center">
                     <img class="dropdown-user-img" src="/sbadmin/assets/img/illustrations/profiles/profile-1.png" />
                     <div class="dropdown-user-details">
-                        <div class="dropdown-user-details-name">Nama User</div>
+                        <div class="dropdown-user-details-name"><?= user()->nama_user ?></div>
                         <div class="dropdown-user-details-email">username</div>
                     </div>
                 </h6>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#!">
+                <a class="dropdown-item" href="/profile">
                     <div class="dropdown-item-icon"><i data-feather="settings"></i></div>
                     Profile
                 </a>
