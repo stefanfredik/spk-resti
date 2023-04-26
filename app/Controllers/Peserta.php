@@ -9,35 +9,39 @@ use App\Models\PendudukModel;
 use App\Models\SubkriteriaModel;
 use CodeIgniter\API\ResponseTrait;
 
-class Peserta extends BaseController {
+class Peserta extends BaseController
+{
     use ResponseTrait;
     var $meta = [
         'url' => 'datapeserta',
-        'title' => 'Data Peserta',
-        'subtitle' => 'Halaman Peserta'
+        'title' => 'Data Penduduk yang Terdaftar',
+        'subtitle' => 'Halaman Penduduk yang Terdaftar'
     ];
 
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->pesertaModel = new PesertaModel();
         $this->pendudukModel = new PendudukModel();
         $this->kriteriaModel = new KriteriaModel();
         $this->subKriteriaModel = new SubkriteriaModel();
     }
 
-    public function index() {
+    public function index()
+    {
 
         $data = [
-            'title' => 'Data Peserta',
+            'title' => 'Data Penduduk Terdaftar',
             'meta'   => $this->meta,
         ];
 
         return view('/peserta/index', $data);
     }
 
-    public function table() {
+    public function table()
+    {
         $data = [
-            'title' => 'Data Data Peserta',
+            'title' => 'Data Penduduk Terdaftar',
             'meta'   => $this->meta,
             'dataPeserta' => $this->pesertaModel->findAllPeserta()
         ];
@@ -45,9 +49,10 @@ class Peserta extends BaseController {
         return view('/peserta/table', $data);
     }
 
-    public function tambah() {
+    public function tambah()
+    {
         $data = [
-            'title' => 'Tambah Data Peserta',
+            'title' => 'Tambah Data Penduduk Terdaftar',
             'meta'   => $this->meta,
             'dataPenduduk' => $this->pendudukModel->findAll(),
             'dataKriteria' => $this->kriteriaModel->findAll(),
@@ -58,9 +63,10 @@ class Peserta extends BaseController {
         return view('/peserta/tambah', $data);
     }
 
-    public function edit($id) {
+    public function edit($id)
+    {
         $data = [
-            'title' => 'Edit Data Peserta',
+            'title' => 'Edit Data Penduduk Terdaftar',
             'meta'   => $this->meta,
             'dataPenduduk' => $this->pendudukModel->findAll(),
             'dataKriteria' => $this->kriteriaModel->findAll(),
@@ -72,7 +78,8 @@ class Peserta extends BaseController {
     }
 
 
-    public function detail($id) {
+    public function detail($id)
+    {
 
         $data = [
             'dataKriteria'  => $this->kriteriaModel->findAll(),
@@ -91,7 +98,8 @@ class Peserta extends BaseController {
     // CRUD
 
 
-    public function store() {
+    public function store()
+    {
         $data = $this->request->getPost();
         $this->pesertaModel->save($data);
 
@@ -104,7 +112,8 @@ class Peserta extends BaseController {
         return $this->respond($res, 200);
     }
 
-    public function update($id) {
+    public function update($id)
+    {
         $data = $this->request->getPost();
         $this->pesertaModel->update($id, $data);
 
@@ -117,7 +126,8 @@ class Peserta extends BaseController {
     }
 
 
-    public function delete($id) {
+    public function delete($id)
+    {
         $this->pesertaModel->delete($id);
         $res = [
             'status'    => 'success',
