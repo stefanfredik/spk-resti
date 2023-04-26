@@ -41,8 +41,8 @@
                 <div class="d-flex align-items-center justify-content-between">
                     <div class="me-3">
                         <i class="bi bi-list-ul text-primary fa-2x"></i>
-                        <h5>Data Peserta</h5>
-                        <div class="text-muted small">Berisi data-data dari peserta.</div>
+                        <h5>Data Penduduk yang Terdaftar</h5>
+                        <div class="text-muted small">Berisi data-data dari dari calon yang akan menerima bantuan.</div>
                     </div>
                     <i class="text-primary bi bi-person-lines-fill fa-5x"></i>
                     <!-- <img src="/sbadmin/assets/img/illustrations/windows.svg" alt="..." style="width: 8rem" /> -->

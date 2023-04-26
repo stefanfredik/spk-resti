@@ -6,7 +6,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-            <div class="row mb-1">
+                <div class="row mb-1">
                     <div class="col-md-4">
                         <label class="form-label">NIK</label>
                     </div>
@@ -31,45 +31,6 @@
                     </div>
                     <div class="col-md-8">
                         <p><?= $penduduk['nama_lengkap'] ?></p>
-                    </div>
-                </div>
-
-                <div class="row mb-1">
-                    <div class="col-md-4">
-                        <label class="form-label">Tempat Lahir</label>
-                    </div>
-                    <div class="col-md-8">
-                        <p><?= $penduduk['tempat_lahir'] ?></p>
-                    </div>
-                </div>
-
-                <div class="row mb-1">
-                    <div class="col-md-4">
-                        <label class="form-label">Tanggal Lahir</label>
-                    </div>
-                    <div class="col-md-8">
-                        <p><?= $penduduk['tanggal_lahir'] ?></p>
-                    </div>
-                </div>
-
-
-                <div class="row mb-1">
-                    <div class="col-md-4">
-                        <label class="form-label">Telepon</label>
-                    </div>
-
-                    <div class="col-md-8">
-                        <p><?= $penduduk['telepon'] ?></p>
-                    </div>
-                </div>
-
-
-                <div class="row mb-1">
-                    <div class="col-md-4">
-                        <label class="form-label">Jenis Kelamin</label>
-                    </div>
-                    <div class="col-md-8">
-                        <p><?= $penduduk['jenis_kelamin'] ?></p>
                     </div>
                 </div>
 

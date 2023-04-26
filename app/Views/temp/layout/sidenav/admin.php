@@ -39,7 +39,7 @@
 
     <a class="nav-link <?= url_is('/datapeserta') ? 'active' : '' ?>" href="/datapeserta">
         <div class="nav-link-icon"><i data-feather="file-text"></i></div>
-        Data Peserta
+        Data Penduduk Terdaftar
     </a>
 
     <div class="sidenav-menu-heading">Pengelolahan</div>
