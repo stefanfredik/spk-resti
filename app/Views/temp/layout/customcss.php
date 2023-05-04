@@ -139,6 +139,11 @@
         /* font-weight: bold; */
     }
 
+    .sidenav-light .sidenav-menu .nav-link.active {
+        color: #0061f2;
+        background-color: #fff;
+    }
+
 
     /* Background */
 

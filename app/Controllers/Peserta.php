@@ -14,8 +14,8 @@ class Peserta extends BaseController
     use ResponseTrait;
     var $meta = [
         'url' => 'datapeserta',
-        'title' => 'Data Peserta',
-        'subtitle' => 'Halaman Peserta'
+        'title' => 'Data Penduduk yang Terdaftar',
+        'subtitle' => 'Halaman Penduduk yang Terdaftar'
     ];
 
 
@@ -31,7 +31,7 @@ class Peserta extends BaseController
     {
 
         $data = [
-            'title' => 'Data Peserta',
+            'title' => 'Data Penduduk Terdaftar',
             'meta'   => $this->meta,
         ];
 
@@ -41,7 +41,7 @@ class Peserta extends BaseController
     public function table()
     {
         $data = [
-            'title' => 'Data Data Peserta',
+            'title' => 'Data Penduduk Terdaftar',
             'meta'   => $this->meta,
             'dataPeserta' => $this->pesertaModel->findAllPeserta()
         ];
@@ -52,7 +52,7 @@ class Peserta extends BaseController
     public function tambah()
     {
         $data = [
-            'title' => 'Tambah Data Peserta',
+            'title' => 'Tambah Data Penduduk Terdaftar',
             'meta'   => $this->meta,
             'dataPenduduk' => $this->pendudukModel->findAll(),
             'dataKriteria' => $this->kriteriaModel->findAll(),
@@ -66,7 +66,7 @@ class Peserta extends BaseController
     public function edit($id)
     {
         $data = [
-            'title' => 'Edit Data Peserta',
+            'title' => 'Edit Data Penduduk Terdaftar',
             'meta'   => $this->meta,
             'dataPenduduk' => $this->pendudukModel->findAll(),
             'dataKriteria' => $this->kriteriaModel->findAll(),

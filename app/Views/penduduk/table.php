@@ -7,11 +7,6 @@
                 <th>No. KK</th>
                 <th>Nama Lengkap</th>
                 <th>Alamat</th>
-                <th>Kelurahan</th>
-                <th>Kecamatan</th>
-                <th>Kabupaten</th>
-                <th>Provinsi</th>
-
                 <th>Opsi</th>
             </tr>
         </thead>

@@ -94,8 +94,8 @@ define('EVENT_PRIORITY_NORMAL', 100);
 define('EVENT_PRIORITY_HIGH', 10);
 
 // $config  = config("Config");
-const APP_NAME  = "SPK";
-const APP_DESC   = "Sistem Seleksi Bantuan Desa";
+const APP_NAME  = "SPK PKH";
+const APP_DESC   = "SISTEM PENDUKUNG KEPUTUSAN SELEKSI PENERIMA BANTUAN SOSIAL PROGRAM KELUARGA HARAPAN (PKH) PADA DESA WEWO";
 const APP_VER   = "1.0.0";
 const LOGO_IMG = "assets/img/favicon.png";
-const APP_SLUG = "SPK BLT";
+const APP_SLUG = "SPK PKH";
