@@ -2,7 +2,8 @@
 
 namespace App\Libraries;
 
-class Moora {
+class Moora
+{
     var $peserta            = array();
     var $kriteria           = array();
     var $nilaiKriteria      = array();
@@ -23,29 +24,31 @@ class Moora {
         public array $dataPeserta,
         public array $dataKriteria,
         public array $dataSubkriteria,
-        public array $nilaiKelayakan
     ) {
         $this->setBobotKriteria();
         $this->insertKriteria();
         $this->setPesertaKriteriaValue();
         $this->sumKriteriaValue();
         $this->insertToPeserta();
-        $this->sortPeserta();
+        // $this->sortPeserta();
         $this->countBenCost();
     }
 
-    public function getAllPeserta() {
+    public function getAllPeserta()
+    {
         return $this->peserta;
     }
 
-    private function setNilaiKriteria() {
+    private function setNilaiKriteria()
+    {
         foreach ($this->dataKriteria as $dk) {
             array_push($this->nilaiKriteria, $dk['nilai']);
         }
     }
 
     // Hitung bobot kriteria
-    private function setBobotKriteria() {
+    private function setBobotKriteria()
+    {
         $nilaiKriteria = array();
         foreach ($this->dataKriteria as $dk) {
             array_push($nilaiKriteria, $dk['nilai']);
@@ -57,7 +60,8 @@ class Moora {
     }
 
     // Insert data nilai kriteria ke dalam array peserta
-    private function insertKriteria() {
+    private function insertKriteria()
+    {
         $this->peserta = $this->dataPeserta;
 
         foreach ($this->dataPeserta  as $key => $ps) {
@@ -79,7 +83,8 @@ class Moora {
 
 
     // Menampung data kriteria tertentu dari setiap peserta
-    private function setPesertaKriteriaValue() {
+    private function setPesertaKriteriaValue()
+    {
         foreach ($this->dataKriteria as $dk) {
             $this->pesertaKriteria[$dk['keterangan']] = array();
 
@@ -91,13 +96,15 @@ class Moora {
     }
 
     // Menghitung total nilai kriteria tertentu dari seluruh peserta
-    private function sumKriteriaValue() {
+    private function sumKriteriaValue()
+    {
         foreach ($this->pesertaKriteria as $key => $k) {
             $this->totalKriteria[$key] = array_sum($k);
         }
     }
 
-    private function insertToPeserta() {
+    private function insertToPeserta()
+    {
         // Normalisasi data ke array
         foreach ($this->peserta as $i => $ps) {
             foreach ($ps['data_kriteria_nilai'] as $key => $dk) {
@@ -161,57 +168,14 @@ class Moora {
 
         // Nilai ke array
         foreach ($this->peserta as $i => $ps) {
-            $this->peserta[$i]['kriteria_nilai'] = ($ps['kriteria_max'] + $ps['kriteria_min']);
-        }
-
-        // Kelayakan
-        $status = "";
-        // foreach ($this->peserta as $i => $ps) {
-        //     $n = (float)$ps['kriteria_nilai'];
-        //     $max = 0;
-
-        //     foreach ($this->nilaiKelayakan as $kl) {
-        //         if ($n >= $kl['nilai'] && $kl['nilai'] >= $max) {
-        //             $max = $kl['nilai'];
-        //             $status = $kl['keterangan'];
-        //         }
-        //     }
-
-        //     $this->peserta[$i]['status_layak'] = $status;
-        // }
-
-
-        foreach ($this->nilaiKelayakan as $kl) {
-            if ($kl['keterangan'] == 'Layak') {
-                $c1 = $kl['nilai'];
-            }
-
-            if ($kl['keterangan'] == 'Cukup Layak') {
-                $c2 = $kl['nilai'];
-            }
-
-            if ($kl['keterangan'] == 'Tidak Layak') {
-                $c3 = $kl['nilai'];
-            }
-        }
-
-        foreach ($this->peserta as $i => $ps) {
-            $nilai = $ps['kriteria_nilai'];
-            if ($nilai >= $c1) {
-                $status = 'Layak';
-            } else if ($nilai >= $c2 && $nilai < $c1) {
-                $status = 'Cukup Layak';
-            } else {
-                $status = 'Tidak Layak';
-            }
-
-            $this->peserta[$i]['status_layak'] = $status;
+            $this->peserta[$i]['kriteria_nilai'] = ($ps['kriteria_max'] - $ps['kriteria_min']);
         }
     }
 
 
     // Hitung Jumlah Key Kriteria
-    private function countBenCost() {
+    private function countBenCost()
+    {
         foreach ($this->dataKriteria as $dk) {
             if ($dk['type'] == 'benefit') {
                 $this->jumKriteriaBenefit++;
@@ -224,22 +188,26 @@ class Moora {
 
 
     // helper function 
-    private function sortPeserta() {
+    private function sortPeserta()
+    {
         usort($this->peserta, fn ($a, $b) => $b['kriteria_nilai'] <=> $a['kriteria_nilai']);
     }
 
-    private function hitungBobot(int $nk, array $allNk) {
+    private function hitungBobot(int $nk, array $allNk)
+    {
         if ($nk == 0 || $allNk == 0) {
             return 0;
         }
         $total = array_sum($allNk);
-        return number_format(($nk / $total), 2);
+        return number_format(($nk / $total), 3);
+        // return ($nk / $total);
     }
 
     #bobot              = bobot peserta dalam sebuah kriteria
     #semuaBobot         = semua bobot peserta dalam satu buat kriteria
 
-    private function normalisasi(float $bobot, array $semuabobot): float {
+    private function normalisasi(float $bobot, array $semuabobot): float
+    {
         $nilai = 0;
 
         if ($bobot == 0) {
@@ -252,9 +220,12 @@ class Moora {
 
 
         return number_format($bobot / sqrt($nilai), 4);
+        // return ($bobot / sqrt($nilai));
     }
 
-    private function optimasi($nilai, $bobot): float {
-        return number_format($nilai * $bobot, 4);
+    private function optimasi($nilai, $bobot): float
+    {
+        return number_format($nilai * $bobot, 3);
+        // return ($nilai * $bobot);
     }
 }

@@ -34,51 +34,8 @@
                         </div>
                     </div>
 
-                    <div class="row mb-2">
-                        <div class="col-md-4">
-                            <label class="form-label">Tempat Lahir</label>
-                        </div>
-                        <div class="col-md-8">
-                            <input name="tempat_lahir" type="text" class="form-control" required>
-                        </div>
-                    </div>
-
-                    <div class="row mb-2">
-                        <div class="col-md-4">
-                            <label class="form-label">Tanggal Lahir</label>
-                        </div>
-                        <div class="col-md-8">
-                            <input name="tanggal_lahir" type="date" class="form-control" required>
-                        </div>
-                    </div>
-
-
-
-                    <div class="row mb-2">
-                        <div class="col-md-4">
-                            <label class="form-label">Jenis Kelamin</label>
-                        </div>
-                        <div class="col-md-8">
-                            <select class="form-control" name="jenis_kelamin" id="" required>
-                                <option value="">Pilih Jenis Kelamin</option>
-                                <option value="Laki-Laki">Laki-Laki</option>
-                                <option value="Perempuan">Perempuan</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="row mb-2">
-                        <div class="col-md-4">
-                            <label class="form-label">Telepon</label>
-                        </div>
-                        <div class="col-md-8">
-                            <input name="telepon" type="text" class="form-control" required>
-                        </div>
-                    </div>
-
-
-
                     <hr>
+
                     <h4>Alamat</h4>
                     <div class="row mb-2">
                         <div class="col-md-4">
@@ -91,10 +48,10 @@
 
                     <div class="row mb-2">
                         <div class="col-md-4">
-                            <label class="form-label">Desa</label>
+                            <label class="form-label">Kelurahan</label>
                         </div>
                         <div class="col-md-8">
-                            <input name="desa" type="text" class="form-control" required>
+                            <input name="kelurahan" type="text" class="form-control" required>
                         </div>
                     </div>
 

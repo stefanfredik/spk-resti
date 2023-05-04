@@ -4,7 +4,8 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class PesertaModel extends Model {
+class PesertaModel extends Model
+{
     protected $DBGroup          = 'default';
     protected $table            = 'peserta';
     protected $primaryKey       = 'id';
@@ -26,7 +27,7 @@ class PesertaModel extends Model {
     public function findPeserta($id)
     {
         $this->select('peserta.id as id_peserta');
-        $this->select('datapenduduk*');
+        $this->select('datapenduduk.*');
         $this->select('peserta.*');
         $this->join('datapenduduk', 'datapenduduk.id = peserta.id_penduduk');
         return $this->find($id);

@@ -21,79 +21,21 @@
                             <label class="form-label">NIK</label>
                         </div>
                         <div class="col-md-8">
-                            <p><?= $peserta['nisn']; ?></p>
+                            <p><?= $peserta['nik']; ?></p>
                         </div>
                     </div>
 
 
                     <div class="row mb-2">
                         <div class="col-md-4">
-                            <label class="form-label">Jenis Kelamin</label>
+                            <label class="form-label">No. KK</label>
                         </div>
                         <div class="col-md-8">
-                            <p><?= $peserta['jenis_kelamin']; ?></p>
+                            <p><?= $peserta['no_kk']; ?></p>
                         </div>
                     </div>
-
-                    <div class="row mb-2">
-                        <div class="col-md-4">
-                            <label class="form-label">Tempat Lahir</label>
-                        </div>
-                        <div class="col-md-8">
-                            <p><?= $peserta['tempat_lahir']; ?></p>
-                        </div>
-                    </div>
-
-                    <div class="row mb-2">
-                        <div class="col-md-4">
-                            <label class="form-label">Tanggal Lahir</label>
-                        </div>
-                        <div class="col-md-8">
-                            <p><?= $peserta['tanggal_lahir']; ?></p>
-                        </div>
-                    </div>
-
-
-                    <div class="row mb-2">
-                        <div class="col-md-4">
-                            <label class="form-label">Kelas</label>
-                        </div>
-                        <div class="col-md-8">
-                            <p><?= $peserta['kelas']; ?></p>
-                        </div>
-                    </div>
-
 
                     <hr>
-
-
-                    <div class="row mb-2">
-                        <div class="col-md-4">
-                            <label class="form-label">Nama Orang Tua</label>
-                        </div>
-                        <div class="col-md-8">
-                            <p><?= $peserta['nama_orangtua']; ?></p>
-                        </div>
-                    </div>
-
-                    <div class="row mb-2">
-                        <div class="col-md-4">
-                            <label class="form-label">Jumlah Tanggungan</label>
-                        </div>
-                        <div class="col-md-8">
-                            <p><?= $peserta['jumlah_tanggungan']; ?></p>
-                        </div>
-                    </div>
-
-
-                    <div class="row mb-2">
-                        <div class="col-md-4">
-                            <label class="form-label">No. Telepon</label>
-                        </div>
-                        <div class="col-md-8">
-                            <p><?= $peserta['telepon']; ?></p>
-                        </div>
-                    </div>
 
                     <div class="row mb-2">
                         <div class="col-md-4">
@@ -101,6 +43,33 @@
                         </div>
                         <div class="col-md-8">
                             <p><?= $peserta['alamat']; ?></p>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <div class="col-md-4">
+                            <label class="form-label">Desa/ Kelurahan</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p><?= $peserta['kelurahan']; ?></p>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <div class="col-md-4">
+                            <label class="form-label">Kecamatan</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p><?= $peserta['kecamatan']; ?></p>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <div class="col-md-4">
+                            <label class="form-label">Provinsi</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p><?= $peserta['provinsi']; ?></p>
                         </div>
                     </div>
 

@@ -13,9 +13,6 @@ class Datapenduduk extends Migration
                 'type'  => 'INT',
                 'auto_increment' => true
             ],
-            'id_user' => [
-                'type'  => 'INT',
-            ],
 
             'nik' => [
                 'type' => 'VARCHAR',
@@ -30,42 +27,31 @@ class Datapenduduk extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => 64
             ],
-            'tempat_lahir' => [
-                'type' => 'VARCHAR',
-                'constraint' => 64
-            ],
-            'tanggal_lahir' => [
-                'type' => 'DATE'
-            ],
-            'jenis_kelamin' => [
-                'type' => 'VARCHAR',
-                'constraint' => 64
-            ],
-
-            'telepon' => [
-                'type' => 'VARCHAR',
-                'constraint' => 64
-            ],
-
             'alamat' => [
                 'type' => 'VARCHAR',
-                'constraint' => 128
+                'constraint' => 128,
+                'null' => true
             ],
-            'desa' => [
+            'kelurahan' => [
                 'type' => 'VARCHAR',
-                'constraint' => 128
+                'constraint' => 128,
+                'null' => true
             ],
             'kecamatan' => [
                 'type' => 'VARCHAR',
-                'constraint' => 128
+                'constraint' => 128,
+                'null' => true
             ],
+
             'kabupaten' => [
                 'type' => 'VARCHAR',
-                'constraint' => 128
+                'constraint' => 128,
+                'null' => true
             ],
             'provinsi' => [
                 'type' => 'VARCHAR',
-                'constraint' => 128
+                'constraint' => 128,
+                'null' => true
             ]
         ];
 
