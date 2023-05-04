@@ -6,6 +6,10 @@
                 <th>NIK</th>
                 <th>No. KK</th>
                 <th>Nama Lengkap</th>
+                <th>Kelurahan</th>
+                <th>Kecamatan</th>
+                <th>Kabupaten</th>
+                <th>Provinsi</th>
                 <th>Alamat</th>
                 <th>Opsi</th>
             </tr>
