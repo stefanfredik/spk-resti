@@ -24,7 +24,7 @@
                     <div class="me-3">
                         <i class="bi bi-list-ul text-primary fa-2x"></i>
                         <h5>Data Penduduk</h5>
-                        <div class="text-muted small">Data penduduk yang masuk kriteria calon peserta penerima BLT.</div>
+                        <div class="text-muted small">Data penduduk yang masuk kriteria calon peserta penerima PKH.</div>
                     </div>
                     <i class="text-primary bi bi-people-fill fa-5x"></i>
                     <!-- <img src="/sbadmin/assets/img/illustrations/browser-stats.svg" alt="..." style="width: 8rem" /> -->
