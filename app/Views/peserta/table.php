@@ -3,6 +3,7 @@
         <thead>
             <tr>
                 <th>No</th>
+                <th>Tahun</th>
                 <th>NIK</th>
                 <th>No. KK</th>
                 <th>Nama</th>
@@ -16,6 +17,7 @@
             foreach ($dataPeserta as $dt) : ?>
                 <tr>
                     <td><?= $no++; ?></td>
+                    <th><?= $dt['tahun']; ?></th>
                     <td><?= $dt['nik']; ?></td>
                     <td><?= $dt['no_kk']; ?></td>
                     <td><?= $dt['nama_lengkap']; ?></td>

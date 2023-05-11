@@ -7,6 +7,16 @@
             </div>
             <div class="modal-body ">
                 <div class="border rounded p-3">
+
+                    <div class="row mb-2">
+                        <div class="col-md-4">
+                            <label class="form-label">Tahun Bantuan</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p><?= $peserta['tahun']; ?></p>
+                        </div>
+                    </div>
+
                     <div class="row mb-2">
                         <div class="col-md-4">
                             <label class="form-label">Nama Lengkap</label>

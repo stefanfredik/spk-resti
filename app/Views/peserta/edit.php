@@ -8,6 +8,7 @@
 
             <form action="<?= $meta['url']; ?>" method="" data-id="<?= $peserta['id']; ?>" id="formTambah" onsubmit="update(event)">
                 <div class="modal-body">
+
                     <div class="row mb-2">
                         <div class="col-md-4">
                             <label class="form-label">Penduduk</label>
@@ -21,6 +22,21 @@
                             </select>
                         </div>
                     </div>
+
+                    <div class="row mb-2">
+                        <div class="col-md-4">
+                            <label class="form-label">Tahun</label>
+                        </div>
+                        <div class="col-md-8">
+                            <select class="form-control" name="tahun" id="" required>
+                                <?php for ($i = 2020; $i < 2030; $i++) : ?>
+                                    <option <?= ($peserta['tahun'] == $i) ? 'selected' : '' ?> value="<?= $i; ?>"><?= $i; ?></option>
+                                <?php endfor; ?>
+                            </select>
+                        </div>
+                    </div>
+                    <hr>
+
 
                     <?php foreach ($dataKriteria as $dt) : ?>
                         <div class="row mb-2">

@@ -188,7 +188,7 @@ class Moora
 
 
     // helper function 
-    private function sortPeserta()
+    public function sortPeserta()
     {
         usort($this->peserta, fn ($a, $b) => $b['kriteria_nilai'] <=> $a['kriteria_nilai']);
     }
@@ -227,5 +227,13 @@ class Moora
     {
         return number_format($nilai * $bobot, 3);
         // return ($nilai * $bobot);
+    }
+
+    public function setRangking()
+    {
+        foreach ($this->peserta as $key => $da) {
+            $this->peserta[$key]['rangking'] = $key + 1;
+            $this->peserta[$key]['periode'] = "";
+        }
     }
 }

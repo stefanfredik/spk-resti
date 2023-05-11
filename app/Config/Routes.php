@@ -151,10 +151,15 @@ $routes->group('kuota', static function ($router) {
     $router->delete("(:num)", "Kuota::delete/$1");
 });
 
+$routes->group("laporan", static function ($router) {
+    $router->get("/", "Laporan::index");
+    $router->get("cetak", "Laporan::cetak");
+});
+
 
 $routes->get("perhitungan", 'Perhitungan::index');
 $routes->get("keputusan", 'Keputusan::index');
-$routes->get("laporan", 'Laporan::index');
+
 
 // coba
 
