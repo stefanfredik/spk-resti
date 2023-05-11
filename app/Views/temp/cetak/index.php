@@ -74,7 +74,7 @@
 
         <div>
 
-            <p style="text-align: right;"><?php echo "Nggorang, " . date('d-m-Y'); ?></p>
+            <p style="text-align: right;"><?php echo "Desa Wewo, " . date('d-m-Y'); ?></p>
             <h3 class="head"><?= $title; ?></h3>
         </div>
 

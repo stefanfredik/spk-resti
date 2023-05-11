@@ -5,7 +5,7 @@
     <div class="col-xl mb-5">
         <div class="card justify-content-center p-3">
             <h2 class="">Halo Admin</h2>
-            <h4 class="">Selamat datang di <?= APP_NAME; ?></h4>
+            <h4 class="">Selamat datang di <?= APP_DESC; ?></h4>
             <div>
                 <img width="100" class="img-fluid text-center" src="/assets/img/logo.png" alt="">
             </div>
