@@ -18,13 +18,14 @@
 
                     <div class="row mb-2">
                         <div class="col-md-4">
-                            <label class="form-label">Jabatan</label>
+                            <label class="form-label">User Role</label>
                         </div>
                         <div class="col-md-8">
                             <select class="form-control" name="jabatan" id="" required>
-                                <option value="">Pilih Jabatan</option>
-                                <option value="admin">Admin</option>
-                                <option value="kepala-desa">Kepala Sekolah</option>
+                                <option value="">Pilih User Role</option>
+                                <?php foreach ($jabatan as $jb) : ?>
+                                    <option value="<?= $jb['name']; ?>"><?= $jb['description']; ?></option>
+                                <?php endforeach; ?>
                             </select>
                         </div>
                     </div>

@@ -85,7 +85,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</button>
-                <button onclick="edit('<?= $meta['url'] ?>',this)" data-id="<?= $penduduk['id']; ?>" type="submit" class="btn btn-primary">Edit</button>
+                <!-- <button onclick="edit('<?= $meta['url'] ?>',this)" data-id="<?= $penduduk['id']; ?>" type="submit" class="btn btn-primary">Edit</button> -->
             </div>
         </div>
     </div>

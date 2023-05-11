@@ -14,7 +14,7 @@
         <tbody>
             <?php foreach ($dataUser as $dt) : ?>
                 <tr>
-                    <td><i class="me-1 text-primary rounded" data-feather="user"></td>
+                    <td><i class="bi bi-person-circle fa-1x"></i></td>
                     <td><?= $dt['nama_user']; ?></td>
                     <td><?= $dt['username']; ?></td>
                     <td><?= $dt['jabatan']; ?></td>

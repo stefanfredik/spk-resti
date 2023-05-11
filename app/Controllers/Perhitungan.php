@@ -14,8 +14,8 @@ class Perhitungan extends BaseController
 {
     var $meta = [
         'url' => 'perhitungan',
-        'title' => 'Data Perhitungan',
-        'subtitle' => 'Halaman Perhitungan'
+        'title' => 'Data Moora',
+        'subtitle' => 'Halaman Perhitungan Moora'
     ];
 
     private $totalNilaiKriteria;
