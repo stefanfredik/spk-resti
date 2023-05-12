@@ -19,5 +19,4 @@
             <div class="sidenav-footer-title"><?= user()->nama_user ?></div>
         </div>
     </div>
-
 </nav>
