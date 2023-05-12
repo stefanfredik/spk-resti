@@ -31,7 +31,7 @@
 
 
                         <div class="col-md-8">
-                            <select class="form-control" name="id_penduduk" id="" required>
+                            <select class="form-control" name="id_penduduk" id="nama" required>
                                 <option value="">Pilih Penduduk</option>
                                 <?php foreach ($dataPenduduk as $dt) : ?>
                                     <option value="<?= $dt['id']; ?>"><?= $dt['nama_lengkap']; ?></option>
@@ -68,3 +68,11 @@
         </div>
     </div>
 </div>
+
+
+<script>
+    $("#nama").select2({
+        theme: "bootstrap-5",
+        dropdownParent: $('#modal')
+    });
+</script>

@@ -54,7 +54,7 @@ class Peserta extends BaseController
         $data = [
             'title' => 'Tambah Data Penduduk Terdaftar',
             'meta'   => $this->meta,
-            'dataPenduduk' => $this->pendudukModel->findAll(),
+            'dataPenduduk' => $this->pendudukModel->findAllNonPeserta(),
             'dataKriteria' => $this->kriteriaModel->findAll(),
             'dataSubkriteria' => $this->subKriteriaModel->findAll(),
             'dataPeserta' => $this->pesertaModel->findAll(),

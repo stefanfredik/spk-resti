@@ -25,11 +25,11 @@ class PendudukModel extends Model
         return $this->findAll();
     }
 
-    public function findAllNonBantuan()
+    public function findAllNonPeserta()
     {
         $this->select("datapenduduk.*");
         // $this->select("datablt.*");
-        $this->join("peserta", "peserta.id_penduduk = penduduk.id", "left")->where("peserta.id", NULL);
+        $this->join("peserta", "peserta.id_penduduk = datapenduduk.id", "left")->where("peserta.id", NULL);
         return $this->findAll();
     }
 
