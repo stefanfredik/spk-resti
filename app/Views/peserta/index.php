@@ -21,6 +21,8 @@
 <?= $this->endSection(); ?>
 
 <?= $this->section('script'); ?>
+
+
 <script>
     let url = '<?= $meta['url']; ?>';
 
@@ -28,4 +30,6 @@
         getTable(url);
     });
 </script>
+
+
 <?= $this->endSection(); ?>

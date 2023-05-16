@@ -9,9 +9,10 @@
             <div class="card-body text-center">
                 <!-- <img class="img-account-profile rounded-circle mb-2" src="assets/img/illustrations/profiles/profile-1.png" alt="" /> -->
                 <i class="text-primary bi bi-person-circle fa-10x"></i>
-                <div class="small font-italic text-muted mb-4">Nama Lengkap</div>
-                <!-- Profile picture upload button-->
-                <!-- <button class="btn btn-primary" type="button">Upload new image</button> -->
+                <div class="small font-italic text-muted mb-4"><?= user()->nama_user ?></div>
+                <?php if (in_groups("admin")) : ?>
+                    <button data-url="<?= '/' . $meta['url'] . '/gantipassword'; ?>" class="my-2 btn btn-primary" onclick="add(this)"><i class="bi bi-plus-circle mx-1"></i>Ganti Password</button>
+                <?php endif; ?>
             </div>
         </div>
     </div>
@@ -44,4 +45,58 @@
             </div>
         </div>
     </div>
+    <div id="modalArea">
+    </div>
+    <?= $this->endSection(); ?>
+
+    <?= $this->section("script") ?>
+
+    <script>
+        const formInput = ["password", "password2"];
+
+        function validation(error) {
+            resetForm(formInput);
+            if (error.password) {
+                $("input[name='password']").addClass("is-invalid").next().html(error.password);
+            }
+
+            if (error.password2) {
+                $("input[name='password2']").addClass("is-invalid").next().html(error.password2);
+            }
+        }
+
+        function resetForm(arr) {
+            arr.forEach((a) => {
+                $(`input[name='${a}']`).removeClass("is-invalid").next().html("");
+            });
+        }
+
+        async function gantiPass(event) {
+            event.preventDefault();
+            let form = document.querySelector("form");
+            let url = form.getAttribute("action");
+            const data = new FormData(form);
+            const modal = $("#modal");
+            axios.post(`/profile/gantipassword`, data).then(res => {
+                debug(res);
+                if (res.data.status == "success") {
+                    Toast.fire({
+                        icon: res.data.status,
+                        title: res.data.msg
+                    });
+                    modal.modal("hide");
+                }
+            }).catch(e => {
+                debug(e);
+                if (!(typeof e.response.data.error == "undefined")) {
+                    return validation(e.response.data.error)
+                }
+                return Toast.fire({
+                    icon: "error",
+                    title: "Gagal menambah data!"
+                })
+            })
+        }
+    </script>
+
     <?= $this->endSection(); ?>

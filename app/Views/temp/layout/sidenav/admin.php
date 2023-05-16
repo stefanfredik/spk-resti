@@ -45,7 +45,7 @@
 
     <a class="nav-link" href="/datapeserta">
         <div class="nav-link-icon"><i data-feather="file-text"></i></div>
-        Data Peserta
+        Data Pengajuan
     </a>
 
     <div class="sidenav-menu-heading">Pengelolahan</div>

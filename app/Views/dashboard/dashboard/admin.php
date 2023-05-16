@@ -6,7 +6,7 @@
                     <div class="me-3">
                         <i class="text-white bi bi-people fa-2x"></i>
                         <h5 class="text-white">Data User</h5>
-                        <div class="text-white small">Data user yang dapat mengakses sistem.</div>
+                        <div class="text-white small"><?= $dataUserCount ?> User</div>
                     </div>
                 </div>
             </div>
@@ -20,7 +20,7 @@
                     <div class="me-3">
                         <i class="bi bi-list-ul text-white fa-2x"></i>
                         <h5 class="text-white">Data Penduduk</h5>
-                        <div class="text-white small">Data penduduk yang masuk kriteria calon peserta penerima PKH.</div>
+                        <div class="text-white small"><?= $dataPendudukCount ?> Penduduk</div>
                     </div>
                 </div>
             </div>
@@ -34,8 +34,8 @@
                 <div class="d-flex align-items-center justify-content-between">
                     <div class="me-3">
                         <i class="text-primary bi bi-person-lines-fill fa-2x"></i>
-                        <h5 class="text-primary">Data Penduduk yang Terdaftar</h5>
-                        <div class="text-primary small">Berisi data-data dari dari calon yang akan menerima bantuan.</div>
+                        <h5 class="text-primary">Data Pengajuan</h5>
+                        <div class="text-primary small"><?= $dataPesertaCount ?> Penduduk</div>
                     </div>
                 </div>
             </div>
@@ -49,7 +49,7 @@
                     <div class="me-3">
                         <i class="text-primary bi bi-clipboard-fill fa-2x"></i>
                         <h5>Data Kriteria</h5>
-                        <div class="text-muted small">Merupakan data kriteria yang digunakan untuk seleksi peserta.</div>
+                        <div class="text-muted small"><?= $dataKriteriaCount ?></div>
                     </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@
                     <div class="me-3">
                         <i class="text-white bi bi-clipboard-pulse fa-2x"></i>
                         <h5 class="text-white">Data Sub Kriteria</h5>
-                        <div class="text-white small">Data subkriteria</div>
+                        <div class="text-white small"><?= $dataSubKriteriaCount ?></div>
                     </div>
                 </div>
             </div>
@@ -79,7 +79,7 @@
                     <div class="me-3">
                         <i class="text-white bi bi-calculator fa-2x"></i>
                         <h5 class="text-white">Data Perhitungan</h5>
-                        <div class="text-white small">Data perhitungan</div>
+                        <div class="text-white small">Data perhitungan Moora</div>
                     </div>
                 </div>
             </div>

@@ -9,6 +9,7 @@
         if (logged_in()) {
             if (in_groups('admin')) echo view("/temp/layout/sidenav/admin");
             if (in_groups('kepala-desa') || in_groups('pendamping'))  echo view("/temp/layout/sidenav/kepaladesa");
+            if (in_groups('masyarakat')) echo view("/temp/layout/sidenav/masyarakat");
         }
         ?>
     </div>

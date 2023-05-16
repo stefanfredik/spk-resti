@@ -38,14 +38,9 @@ $routes->get("user", "User::index");
 
 $routes->group('profile', static function ($router) {
     $router->get('/', 'Profile::index');
-    $router->get('tambah', 'Profile::tambah');
-    $router->get('edit/(:num)', 'Profile::edit/$1');
-    $router->get('delete/(:num)', 'Profile::delete/$1');
-    $router->get('password/(:num)', 'Profile::password/$1');
+    $router->get('gantipassword', 'Profile::gantipassword');
 
-    $router->post("/", "Profile::add");
-    $router->post("(:num)", "Profile::update/$1");
-    $router->post('password/(:num)', 'Profile::gantiPassword/$1');
+    $router->post('gantipassword', 'Profile::doGantiPassword');
 });
 
 

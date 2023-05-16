@@ -7,7 +7,9 @@
                 <th>Keterangan</th>
                 <th>Bobot</th>
                 <th>Cost/Benefit</th>
-                <th>Action</th>
+                <?php if (in_groups("admin")) : ?>
+                    <th>Action</th>
+                <?php endif; ?>
             </tr>
         </thead>
         <tbody>
@@ -20,12 +22,14 @@
                     <td><?= $dt['keterangan']; ?></td>
                     <td><?= $dt['nilai']; ?></td>
                     <td><?= $dt['type']; ?></td>
-                    <td style="text-align: center" width="120px">
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                            <button onclick="remove('<?= $url; ?>', this)" class="btn btn-sm text-white btn-danger" data-id="<?= $dt['id'] ?>"><i class="bi bi-trash mr-2"></i></button>
-                            <button onclick="edit('<?= $url; ?>', this)" class="btn btn-sm  btn-primary" data-id="<?= $dt['id'] ?>"><i class="bi bi-pencil-square mr-2"></i></button>
-                        </div>
-                    </td>
+                    <?php if (in_groups("admin")) : ?>
+                        <td style="text-align: center" width="120px">
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button onclick="remove('<?= $url; ?>', this)" class="btn btn-sm text-white btn-danger" data-id="<?= $dt['id'] ?>"><i class="bi bi-trash mr-2"></i></button>
+                                <button onclick="edit('<?= $url; ?>', this)" class="btn btn-sm  btn-primary" data-id="<?= $dt['id'] ?>"><i class="bi bi-pencil-square mr-2"></i></button>
+                            </div>
+                        </td>
+                    <?php endif; ?>
                 </tr>
             <?php endforeach; ?>
         </tbody>
