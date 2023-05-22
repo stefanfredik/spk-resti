@@ -27,17 +27,40 @@ class Laporan extends BaseController
     }
 
 
-    public function index()
+    public function bantuan()
     {
         $data = $this->data();
-        return view("laporan/index", $data);
+        $this->meta['subtitle'] = "Data Dana Bantuan";
+
+        $data["meta"] =  $this->meta;
+
+        return view("laporan/databantuan", $data);
     }
 
-    public function cetak()
+    public function penduduk()
+    {
+        $data = $this->data();
+        $this->meta['subtitle'] = "Data Penduduk";
+
+        $data["meta"] =  $this->meta;
+
+        // dd($data);
+        return view("laporan/datapenduduk", $data);
+    }
+
+    public function cetakBantuan()
     {
         $data = $this->data();
         $data["title"] = 'LAPORAN ' . APP_DESC;
-        $this->pdf($data, "laporan/cetak");
+        $this->pdf($data, "laporan/cetakBantuan");
+    }
+
+
+    public function cetakPenduduk()
+    {
+        $data = $this->data();
+        $data["title"] = 'LAPORAN ' . APP_DESC;
+        $this->pdf($data, "laporan/cetakPenduduk");
     }
 
     private function data()
@@ -114,7 +137,7 @@ class Laporan extends BaseController
 
         $html = view($view, $data);
         $pdf->loadHtml($html);
-        $pdf->setPaper('A4', 'landscape');
+        $pdf->setPaper('LEGAL', 'landscape');
         $pdf->render();
         return $pdf->stream();
     }

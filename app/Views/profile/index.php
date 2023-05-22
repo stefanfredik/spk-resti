@@ -10,9 +10,9 @@
                 <!-- <img class="img-account-profile rounded-circle mb-2" src="assets/img/illustrations/profiles/profile-1.png" alt="" /> -->
                 <i class="text-primary bi bi-person-circle fa-10x"></i>
                 <div class="small font-italic text-muted mb-4"><?= user()->nama_user ?></div>
-                <?php if (in_groups("admin")) : ?>
-                    <button data-url="<?= '/' . $meta['url'] . '/gantipassword'; ?>" class="my-2 btn btn-primary" onclick="add(this)"><i class="bi bi-plus-circle mx-1"></i>Ganti Password</button>
-                <?php endif; ?>
+
+                <button data-url="<?= '/' . $meta['url'] . '/gantipassword'; ?>" class="my-2 btn btn-primary" onclick="add(this)"><i class="bi bi-plus-circle mx-1"></i>Ganti Password</button>
+
             </div>
         </div>
     </div>
