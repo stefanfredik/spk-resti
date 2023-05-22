@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-lg-6 mb-4">
+    <div class="col-lg-3 mb-4">
         <!-- Dashboard example card 1-->
         <a class="card lift h-100" href="/datapenduduk">
             <div class="card-body d-flex justify-content-center flex-column">
@@ -16,17 +16,31 @@
         </a>
     </div>
 
-    <div class="col-lg-6 mb-4">
+    <div class="col-lg-3 mb-4">
         <!-- Dashboard example card 3-->
-        <a class="card lift h-100" href="/laporan">
+        <a class="card lift bg-success" href="/laporan/bantuan">
             <div class="card-body d-flex justify-content-center flex-column">
                 <div class="d-flex align-items-center justify-content-between">
                     <div class="me-3">
-                        <i class="bi bi-list-ul text-primary fa-2x"></i>
-                        <h5>Laporan</h5>
-                        <div class="text-primary small">Laporan</div>
+                        <i class="text-white bi bi-card-checklist fa-2x"></i>
+                        <h5 class="text-white">Laporan</h5>
+                        <div class="text-white small">Laporan Dana Bantuan</div>
                     </div>
-                    <i class="text-primary bi bi-card-checklist fa-5x"></i>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-lg-3 mb-4">
+        <!-- Dashboard example card 3-->
+        <a class="card lift bg-success" href="/laporan/penduduk">
+            <div class="card-body d-flex justify-content-center flex-column">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="me-3">
+                        <i class="text-white bi bi-card-checklist fa-2x"></i>
+                        <h5 class="text-white">Laporan</h5>
+                        <div class="text-white small">Laporan Data Penduduk Bantuan</div>
+                    </div>
                 </div>
             </div>
         </a>

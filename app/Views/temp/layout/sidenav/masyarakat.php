@@ -15,7 +15,7 @@
 
     <div class="sidenav-menu-heading">Data</div>
 
-    <a class="nav-link" href="/kriteria">
+    <a class="nav-link <?= url_is("/kriteria") ? 'active' : '' ?>" href="/kriteria">
         <div class="nav-link-icon"><i data-feather="layers"></i></div>
         Data Kriteria
     </a>
