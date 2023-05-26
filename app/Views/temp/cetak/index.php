@@ -61,9 +61,9 @@
 
             <div style="display: inline-block; text-align: center; margin: 0 80px;">
                 <p style="margin: 0; font-weight: bold;">PEMERINTAH PROVINSI NUSA TENGGARA TIMUR</p>
-                <p style="margin: 0; font-weight: bold;">KABUPATEN MANGGARAI BARAT</p>
+                <p style="margin: 0; font-weight: bold;">KABUPATEN MANGGARAI TENGAH</p>
                 <p style="margin: 0; font-weight: bold;">DESA WEWO</p>
-                <p style="margin: 0; font-size: small;">Jalan Lintas Selatan Desa Nggorang</p>
+                <p style="margin: 0; font-size: small;">Jalan Lintas Iteng Ulumbu Desa Wewo </p>
             </div>
 
             <div style="display: inline-block;">
