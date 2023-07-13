@@ -22,11 +22,27 @@
                             </select>
                         </div>
                     </div>
+
+                    <div class="row mb-2">
+                        <div class="col-md-4">
+                            <label class="form-label">Periode Bantuan</label>
+                        </div>
+
+
+                        <div class="col-md-8">
+                            <select class="form-control" name="tahun" id="" required>
+                                <option value="">Pilih Periode</option>
+                                <?php for ($i = 1; $i <= 4; $i++) : ?>
+                                    <option value="Periode <?= $i; ?>">Periode <?= $i; ?></option>
+                                <?php endfor; ?>
+                            </select>
+                        </div>
+                    </div>
                     <hr class="">
 
                     <div class="row mb-2">
                         <div class="col-md-4">
-                            <label class="form-label">Penduduk</label>
+                            <label class="form-label">Nama Penduduk</label>
                         </div>
 
 

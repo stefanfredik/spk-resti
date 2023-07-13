@@ -14,7 +14,7 @@ class PesertaModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = false;
-    protected $allowedFields    = ['id', 'id_penduduk', 'tahun'];
+    protected $allowedFields    = ['id', 'id_penduduk', 'tahun', 'periode'];
 
     public function findAllPeserta()
     {

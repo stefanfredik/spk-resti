@@ -74,6 +74,8 @@ class Peserta extends BaseController
             'peserta' => $this->pesertaModel->find($id),
         ];
 
+        // dd($data['peserta']);
+
         return view('/peserta/edit', $data);
     }
 

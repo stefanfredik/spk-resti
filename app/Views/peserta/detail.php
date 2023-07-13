@@ -19,6 +19,15 @@
 
                     <div class="row mb-2">
                         <div class="col-md-4">
+                            <label class="form-label">Periode</label>
+                        </div>
+                        <div class="col-md-8">
+                            <p><?= $peserta['periode']; ?></p>
+                        </div>
+                    </div>
+
+                    <div class="row mb-2">
+                        <div class="col-md-4">
                             <label class="form-label">Nama Lengkap</label>
                         </div>
                         <div class="col-md-8">
