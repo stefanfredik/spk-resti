@@ -76,7 +76,7 @@
 
             <p style="text-align: right;"><?php echo "Desa Wewo, " . date('d-m-Y'); ?></p>
             <h3 class="head"><?= $title; ?></h3>
-            <h3>Tahun 2023</h3>
+            <h3 class="head">Tahun 2023</h3>
         </div>
 
 
