@@ -17,14 +17,14 @@
                         </div>
                     </div>
 
-                    <div class="row mb-2">
+                    <!-- <div class="row mb-2">
                         <div class="col-md-4">
                             <label class="form-label">Periode</label>
                         </div>
                         <div class="col-md-8">
-                            <p><?= $peserta['periode']; ?></p>
+                            <p></p>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="row mb-2">
                         <div class="col-md-4">

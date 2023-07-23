@@ -34,6 +34,8 @@ class Laporan extends BaseController
 
         $data["meta"] =  $this->meta;
 
+        // dd($data);
+
         return view("laporan/databantuan", $data);
     }
 

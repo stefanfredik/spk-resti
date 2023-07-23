@@ -4,7 +4,7 @@
             <tr>
                 <th>No</th>
                 <th>Tahun</th>
-                <th>Periode</th>
+                <!-- <th>Periode</th> -->
                 <th>NIK</th>
                 <th>No. KK</th>
                 <th>Nama Penduduk</th>
@@ -19,7 +19,7 @@
                 <tr>
                     <td><?= $no++; ?></td>
                     <td><?= $dt['tahun']; ?></td>
-                    <td><?= $dt['periode']; ?></td>
+
                     <td><?= $dt['nik']; ?></td>
                     <td><?= $dt['no_kk']; ?></td>
                     <td><?= $dt['nama_lengkap']; ?></td>
