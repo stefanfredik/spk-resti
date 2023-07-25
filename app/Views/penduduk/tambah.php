@@ -65,7 +65,6 @@
                         </div>
                     </div>
 
-
                     <div class="row mb-2">
                         <div class="col-md-4">
                             <label class="form-label">Kabupaten</label>
