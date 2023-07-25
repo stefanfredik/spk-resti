@@ -36,6 +36,9 @@ class Datapenduduk extends BaseController
 
     public function tambah()
     {
+
+
+
         $data = [
             'title' => 'Tambah Data Penduduk',
             'meta'   => $this->meta
@@ -83,6 +86,22 @@ class Datapenduduk extends BaseController
 
     public function store()
     {
+        $rules = [
+            'no_kk'  => [
+                'rules'  => 'required|is_unique[datapenduduk.no_kk]',
+                'errors' => [
+                    'is_unique' => 'Nomor KK Telah digunakan. Silahkan menggunakan nomor KK yang berbeda!'
+                ]
+            ],
+        ];
+
+        if (!$this->validate($rules)) {
+            return $this->respond([
+                'status' => 'error',
+                'error' => $this->validation->getErrors()
+            ], 400);
+        }
+
         $data = $this->request->getPost();
         $this->pendudukModel->save($data);
 

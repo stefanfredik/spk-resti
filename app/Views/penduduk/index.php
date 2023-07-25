@@ -14,7 +14,6 @@
             </div>
             <div id="data" class="card-body"></div>
         </div>
-
     </div>
 </div>
 
@@ -29,6 +28,23 @@
     $(document).ready(() => {
         getTable(url);
     });
+</script>
+
+<script>
+    const formInput = ["no_kk"];
+
+    function validation(error) {
+        resetForm(formInput);
+        if (error.no_kk) {
+            $("input[name='no_kk']").addClass("is-invalid").next().html(error.no_kk);
+        }
+    }
+
+    function resetForm(arr) {
+        arr.forEach((a) => {
+            $(`input[name='${a}']`).removeClass("is-invalid").next().html("");
+        });
+    }
 </script>
 <?= $this->endSection(); ?>
 

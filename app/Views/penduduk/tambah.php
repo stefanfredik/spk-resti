@@ -22,6 +22,7 @@
                         </div>
                         <div class="col-md-8">
                             <input name="no_kk" type="text" class="form-control" required>
+                            <div id="" class="invalid-feedback"></div>
                         </div>
                     </div>
 
